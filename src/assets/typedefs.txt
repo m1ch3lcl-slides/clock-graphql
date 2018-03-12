@@ -1,0 +1,23 @@
+type User {
+  id: Int
+  name: String
+}
+
+type Post {
+  id: Int
+  author: User
+  message: String
+}
+
+type Comment {
+  id: Int
+  author: User
+  post: Post
+  message: String
+}
+
+type Query {
+  getUser(id: Int!): User
+  getPost(id: Int!): Post
+  getComment(id: Int!): Comment
+}

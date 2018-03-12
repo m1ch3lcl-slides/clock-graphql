@@ -1,0 +1,37 @@
+const express = require('express');
+
+const { makeExecutableSchema } = require('graphql-tools');
+
+const graphqlHTTP = require('express-graphql');
+
+const db = require('./bdd');
+const typeDefs = require('./types');
+
+const resolvers = {
+  Query: {
+    getUser: (context, { id }) => db.getUser(id),
+    getPost: (context, { id }) => db.getPost(id),
+    getComment: (context, { id }) => db.getComment(id)
+  },
+  Post: {
+    author: (context) => db.getUser(context.authorId)
+  },
+  Comment: {
+    author: (context) => db.getUser(context.authorId),
+    post: (context) => db.getPost(context.postId)
+  }
+};
+
+const schema = makeExecutableSchema({
+  typeDefs,
+  resolvers
+})
+
+const app = express();
+
+app.use('/graphql', graphqlHTTP({
+  schema,
+  graphiql: true
+}));
+
+app.listen(4000, () => console.log('Running a GraphQL API server at localhost:4000/graphql'));

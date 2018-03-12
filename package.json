@@ -1,0 +1,22 @@
+{
+  "name": "graphql-clock",
+  "description": "",
+  "version": "0.0.1",
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "spectacle": "^4.0.5",
+    "spectacle-code-slide": "^0.5.2",
+    "styled-components": "^2.4.0"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "keywords": []
+}
