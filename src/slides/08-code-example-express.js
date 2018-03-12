@@ -1,7 +1,5 @@
 import React from 'react';
 import CodeSlide from 'spectacle-code-slide';
-import { Slide, Heading, Appear, Text } from 'spectacle';
-import { FitList, SpacedListItem } from '../tags';
 
 const code = `const express = require('express');
 

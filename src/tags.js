@@ -1,16 +1,7 @@
-import React from 'react';
-
 import {
-  BlockQuote,
-  Cite,
-  Deck,
-  Heading,
   ListItem,
   List,
-  Quote,
-  Slide,
-  Text,
-  Appear
+  Quote
 } from 'spectacle';
 
 import styled from 'react-emotion';

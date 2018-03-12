@@ -1,4 +1,3 @@
-import React from 'react';
 import Intro from './01-intro';
 import ExecutiveSummary from './02-executive-summary';
 import WhatIsGraphQL01 from './03-what-is-graphql';

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Slide, Heading, BlockQuote, Cite, Appear } from 'spectacle';
-import { FitList, SpacedListItem, LightQuote } from '../tags';
+import { Slide, Heading } from 'spectacle';
 
 export default (
   <Slide bgColor="primary" padding="100px">
